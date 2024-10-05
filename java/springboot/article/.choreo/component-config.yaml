@@ -1,8 +1,10 @@
-version: 0.1
-endpoints:
-  - name: Article API
-    port: 8080
-    type: REST
-    networkVisibility: Public
-    context: /chat-bot/article/v1
-    schemaFilePath: openapi.yaml
+apiVersion: core.choreo.dev/v1beta1
+kind: ComponentConfig
+spec:
+  inbound:
+    - name: todolist
+      port: 8080
+      type: REST
+      networkVisibility: Public
+      context: /todolist
+      schemaFilePath: openapi.yaml
