@@ -1,0 +1,13 @@
+package com.chatbot.article.util;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+@Slf4j
+@Service
+public class Helper {
+
+    public String generateId(String prefix){
+        return prefix + System.currentTimeMillis();
+    }
+}
